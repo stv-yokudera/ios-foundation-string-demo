@@ -20,7 +20,7 @@ NSString、NSMutableString
 |substring  |文字列の一部を取得する  |`string.substring(to: str.index(string.startIndex, offsetBy: 5)))`  |
 |components  |文字列を区切り文字で分割する  |`string.components(separatedBy: ",")`  |
 |replacingOccurrences  |文字列を置換する  |`string.replacingOccurrences(of: "♥", with: "")`  |
-|hasPrefix   |文字列のPrefixを調べる  |`string..hasPrefix("stv")` |
+|hasPrefix   |文字列のPrefixを調べる  |`string.hasPrefix("stv")` |
 |range  |文字列に該当の文字列が含まれるか調べる  |`string.range(of: "stv")`  |
 
 ## フレームワーク
