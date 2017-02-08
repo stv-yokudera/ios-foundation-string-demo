@@ -1,7 +1,7 @@
 # String
 
 ## 概要
-Stringは文字列をを利用するためのクラスです。
+Stringは文字列を利用するためのクラスです。
 
 ## 関連クラス
 NSString、NSMutableString
@@ -11,7 +11,7 @@ NSString、NSMutableString
 | プロパティ名 | 説明 | サンプル |
 |---|---|---|
 |isEmpty  |空文字チェックをする  | `string.isEmpty` |
-|characters.count  |文字数を取得する  | `array.last` |
+|characters.count  |文字数を取得する  | `string.count` |
 
 ## 主要メソッド
 
