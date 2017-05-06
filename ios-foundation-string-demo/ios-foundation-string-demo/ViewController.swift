@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sampleSubstring()
     }
 
     // MARK: - option
@@ -35,11 +36,21 @@ class ViewController: UIViewController {
     private func sampleSubstring() {
         let string = "1234567890"
         
-        // 先頭から5文字
+        /* substring(to: ) 指定したIndexより前の文字列を取得 */
         print(string.substring(to: string.index(string.startIndex, offsetBy: 5)))
         
-        // 末尾から3文字
+        // 11文字以上なければ、処理しない
+        if let index = string.index(string.startIndex, offsetBy: 11, limitedBy: string.endIndex) {
+            print("\(string.substring(to: index))")
+        }
+        
+        /* substring(from: ) 指定したIndexより後ろの文字列を取得 */
         print(string.substring(from: string.index(string.endIndex, offsetBy: -3)))
+        
+        // 15文字以上なければ、処理しない
+        if let index = string.index(string.endIndex, offsetBy: -15, limitedBy: string.startIndex) {
+            print("\(string.substring(from: index))")
+        }
         
         // 先頭から3文字〜末尾から3文字の範囲
         print(string.substring(with: string.index(string.startIndex, offsetBy: 3) ..< string.index(string.endIndex, offsetBy: -3)))
