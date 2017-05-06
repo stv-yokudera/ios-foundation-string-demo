@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sampleSubstring()
     }
 
     // MARK: - option
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
     private func sampleInt() {
         let testData = ["1","2","♥","4","あ"]
         
-        _ = testData.map {
+        testData.forEach {
             print(Int($0) ?? "数値以外")
         }
     }
@@ -70,7 +69,7 @@ class ViewController: UIViewController {
         let string = "a,b,c,d,e,f,g"
         let separatedArray = string.components(separatedBy: ",")
         
-        _ = separatedArray.map {
+        separatedArray.forEach {
             print($0)
         }
     }
@@ -89,7 +88,7 @@ class ViewController: UIViewController {
             $0.hasPrefix("stv")
         }
         
-        _ = stvMembers.map {
+        stvMembers.forEach {
             print($0)
         }
     }
@@ -102,7 +101,7 @@ class ViewController: UIViewController {
             $0.hasSuffix("001")
         }
         
-        _ = firstMembers.map {
+        firstMembers.forEach {
             print($0)
         }
     }
@@ -155,20 +154,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
